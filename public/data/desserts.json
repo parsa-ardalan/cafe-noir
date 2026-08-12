@@ -1,0 +1,72 @@
+[
+    {
+        "name": "چیزکیک نیویورکی",
+        "description": "چیزکیک کلاسیک با بافتی نرم و خامه‌ای و پایه بیسکویتی ترد. دسری غنی و دوست‌داشتنی.",
+        "deliveryTime": "5-10 min",
+        "price": 185000,
+        "image": "../images/desserts/ny-cheesecake.webp"
+    },
+    {
+        "name": "کیک شکلاتی",
+        "description": "کیک شکلاتی نرم و مرطوب با طعم عمیق کاکائو. انتخابی عالی برای عاشقان شکلات.",
+        "deliveryTime": "5-10 min",
+        "price": 165000,
+        "image": "../images/desserts/chocolate-cake.jpg"
+    },
+    {
+        "name": "کیک هویج",
+        "description": "کیک هویج نرم و معطر با دارچین و مغزهای خوش‌طعم. دسری متعادل و خانگی.",
+        "deliveryTime": "5-10 min",
+        "price": 155000,
+        "image": "../images/desserts/carrot-cake.jpg"
+    },
+    {
+        "name": "براونی شکلاتی",
+        "description": "براونی غلیظ و شکلاتی با بافتی نرم در مرکز و لبه‌های کمی ترد. مناسب برای یک میان‌وعده شیرین.",
+        "deliveryTime": "5-10 min",
+        "price": 145000,
+        "image": "../images/desserts/brownie-cake.jpg"
+    },
+    {
+        "name": "تیرامیسو",
+        "description": "لایه‌هایی لطیف از بیسکویت قهوه‌ای و کرم ماسکارپونه با عطر ملایم قهوه. دسری کلاسیک ایتالیایی.",
+        "deliveryTime": "5-10 min",
+        "price": 195000,
+        "image": "../images/desserts/tiramisu.jpg"
+    },
+    {
+        "name": "پاناکوتا",
+        "description": "دسر ایتالیایی لطیف و خامه‌ای با بافتی نرم و طعمی ملایم. همراه با سس میوه‌ای سرو می‌شود.",
+        "deliveryTime": "5-10 min",
+        "price": 165000,
+        "image": "../images/desserts/pannacotta.jpg"
+    },
+    {
+        "name": "ردولوت",
+        "description": "کیک نرم و لطیف ردولوت با کرم پنیر خامه‌ای. ترکیبی متعادل از شیرینی و بافت خامه‌ای.",
+        "deliveryTime": "5-10 min",
+        "price": 175000,
+        "image": "../images/desserts/redvelt.jpg"
+    },
+    {
+        "name": "کوکی شکلات چیپ",
+        "description": "کوکی تازه و خوش‌عطر با تکه‌های شکلات در هر لقمه. بیرون کمی ترد و داخل نرم و لطیف.",
+        "deliveryTime": "5-10 min",
+        "price": 95000,
+        "image": "../images/desserts/chocolate-chip-cookie.jpg"
+    },
+    {
+        "name": "وافل بلژیکی",
+        "description": "وافل تازه و ترد با بافتی نرم در داخل، مناسب سرو با میوه و سس شکلات یا کارامل.",
+        "deliveryTime": "10-15 min",
+        "price": 180000,
+        "image": "../images/desserts/belgian-waffle.jpg"
+    },
+    {
+        "name": "کروسان شکلاتی",
+        "description": "کروسان لایه‌لایه و تازه با مغز شکلاتی لطیف. انتخابی عالی برای کنار قهوه.",
+        "deliveryTime": "7-12 min",
+        "price": 125000,
+        "image": "../images/desserts/chocolate-croissant.jpg"
+    }
+]

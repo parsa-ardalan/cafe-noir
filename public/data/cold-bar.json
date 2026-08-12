@@ -1,0 +1,72 @@
+[
+    {
+        "name": "آیس لاته",
+        "description": "اسپرسوی تازه، شیر سرد و یخ با طعمی نرم و خنک. انتخابی عالی برای روزهای گرم.",
+        "deliveryTime": "5-10 min",
+        "price": 140000,
+        "image": "../images/cold/iced-latte.jpg"
+    },
+    {
+        "name": "آیس آمریکانو",
+        "description": "اسپرسوی غلیظ روی یخ و آب سرد. نوشیدنی‌ای سبک، خنک و مناسب عاشقان قهوه.",
+        "deliveryTime": "5-10 min",
+        "price": 105000,
+        "image": "../images/cold/iced-americano.jpg"
+    },
+    {
+        "name": "آیس موکا",
+        "description": "ترکیبی از اسپرسو، شیر سرد، شکلات و یخ. طعمی شیرین، خنک و جذاب.",
+        "deliveryTime": "7-12 min",
+        "price": 155000,
+        "image": "../images/cold/iced-mocha.jpg"
+    },
+    {
+        "name": "آیس کارامل لاته",
+        "description": "لاته سرد با سس کارامل و یخ. ترکیبی شیرین و خامه‌ای برای یک نوشیدنی خنک.",
+        "deliveryTime": "7-12 min",
+        "price": 165000,
+        "image": "../images/cold/iced-caramel-latte.jpg"
+    },
+    {
+        "name": "لیموناد کلاسیک",
+        "description": "لیمو تازه، آب خنک و مقدار متعادلی شیرینی. نوشیدنی‌ای تازه و سرحال‌کننده.",
+        "deliveryTime": "5-10 min",
+        "price": 110000,
+        "image": "../images/cold/classical-lime.jpg"
+    },
+    {
+        "name": "لیموناد توت‌فرنگی",
+        "description": "لیموناد تازه همراه با توت‌فرنگی و یخ. ترکیبی میوه‌ای، ترش و شیرین.",
+        "deliveryTime": "7-12 min",
+        "price": 130000,
+        "image": "../images/cold/strawberry-lime.jpg"
+    },
+    {
+        "name": "موهیتو",
+        "description": "ترکیبی خنک از لیموترش، نعناع تازه، آب گازدار و یخ. بسیار تازه و مناسب روزهای گرم.",
+        "deliveryTime": "7-12 min",
+        "price": 135000,
+        "image": "../images/cold/mohito.jpg"
+    },
+    {
+        "name": "اسموتی توت‌فرنگی",
+        "description": "توت‌فرنگی تازه و ترکیبی خامه‌ای با بافتی غلیظ و لطیف. انتخابی خوش‌طعم و میوه‌ای.",
+        "deliveryTime": "8-15 min",
+        "price": 160000,
+        "image": "../images/cold/strawberry-smoothie.jpg"
+    },
+    {
+        "name": "اسموتی انبه",
+        "description": "انبه شیرین و تازه با بافتی نرم و خنک. طعمی گرمسیری و جذاب برای یک روز پرانرژی.",
+        "deliveryTime": "8-15 min",
+        "price": 165000,
+        "image": "../images/cold/mango-smoothie.jpg"
+    },
+    {
+        "name": "شیک شکلات",
+        "description": "شیک غلیظ و خنک با طعم عمیق شکلات. گزینه‌ای محبوب برای دوستداران نوشیدنی‌های شیرین.",
+        "deliveryTime": "8-15 min",
+        "price": 175000,
+        "image": "../images/cold/chocolate-shake.jpg"
+    }
+]
