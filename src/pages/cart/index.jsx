@@ -124,7 +124,6 @@ export default function Cart() {
                     <div>
                         {
                             cartItems.length == 0 ? (
-
                                 // cart is empty
                                 <div className="w-full min-h-56 flex flex-col items-center justify-center gap-4 text-center">
                                     <div className="rounded-full flex items-center justify-center">
@@ -147,7 +146,6 @@ export default function Cart() {
                                         رفتن به منو
                                     </button>
                                 </div>
-
                             ) : (
 
                                 // cart items
@@ -157,7 +155,7 @@ export default function Cart() {
                                         انتخاب های شما
                                     </h2>
 
-                                    <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                                    <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
 
                                         {cartItems.map((item) => (
                                             <article

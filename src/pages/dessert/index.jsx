@@ -87,7 +87,7 @@ function Dessert() {
 
 
             {/* Products */}
-            <section className="grid grid-cols-2 gap-4">
+            <section className="grid grid-cols-2 gap-4 md:grid-cols-3">
 
                 {items.map((item) => (
 
