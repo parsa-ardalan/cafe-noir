@@ -1,14 +1,30 @@
 import { useDispatch } from "react-redux";
 import { addItem } from "../../redux/cartSlice/cartSlice";
 
+import $ from "jquery";
+import "notifyjs";
+
 import items from "../../../public/data/cold-bar.json";
+import { Plus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function Cold() {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate()
 
     const handleAddToCart = (item) => {
+
+        // 1. add to state
         dispatch(addItem(item));
+
+        //2.show notification
+        toast.success(`${item.name} به سبد خرید اضافه شد`)
+        //3. 
+
+
+
     };
 
     return (
@@ -47,6 +63,7 @@ function Cold() {
                             transition
                             hover:bg-white/[0.07]
                         "
+                        onClick={() => { navigate("/cart") }}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -77,71 +94,70 @@ function Cold() {
                     <article
                         key={item.name}
                         className="
-                            overflow-hidden
-                            rounded-2xl
-                            border border-white/10
-                            bg-[#12100f]
-                        "
+                                 col-span-1
+                                    shrink-0 snap-start
+                                    overflow-hidden
+                                    rounded-2xl
+                                    border border-white/10
+                                    bg-[#151312]
+                                    p-2.5
+                                "
                     >
 
                         {/* Image */}
-                        <div className="aspect-square overflow-hidden">
+                        <div className="relative aspect-square overflow-hidden rounded-xl">
 
                             <img
                                 src={item.image}
                                 alt={item.name}
-                                className="
-                                    w-full
-                                    h-full
-                                    object-cover
-                                "
+                                className="h-full w-full object-cover"
                             />
 
                         </div>
 
 
                         {/* Info */}
-                        <div className="p-3.5">
+                        <div className="px-0.5 pb-1 pt-3">
 
-                            <h2 className="text-sm font-medium truncate">
+                            <h3 className="truncate text-sm font-medium sm:text-base">
                                 {item.name}
-                            </h2>
+                            </h3>
 
 
-                            <div className="flex items-center justify-between mt-3">
+                            <div className="mt-1 flex items-center justify-between gap-2">
 
-                                <div className="flex items-baseline gap-1">
+                                {/* Price */}
+                                <div className="flex min-w-0 items-baseline gap-1">
 
-                                    <span className="text-sm font-medium">
+                                    <span className="truncate text-sm font-medium text-[#d99554]">
                                         {item.price.toLocaleString("fa-IR")}
                                     </span>
 
-                                    <span className="text-[9px] text-white/30">
+                                    <span className="shrink-0 text-[9px] text-white/30">
                                         تومان
                                     </span>
 
                                 </div>
 
 
+                                {/* Add */}
                                 <button
-                                    onClick={() => handleAddToCart(item)}
                                     className="
-                                        w-8
-                                        h-8
-                                        rounded-lg
-                                        bg-[#f5f1ec]
-                                        text-black
-                                        flex
-                                        items-center
-                                        justify-center
-                                        text-lg
-                                        font-light
-                                        transition-transform
-                                        active:scale-90
-                                    "
-                                    aria-label={`افزودن ${item.name}`}
+                                                flex size-8 shrink-0
+                                                items-center justify-center
+                                                rounded-full
+                                                border border-[#d99554]
+                                                transition
+                                                hover:bg-[#d99554]/10
+                                                active:scale-90
+                                            "
+                                    onClick={() => { handleAddToCart(item) }}
                                 >
-                                    +
+                                    <Plus
+                                        size={16}
+                                        strokeWidth={2}
+                                        className="text-[#d99554]"
+                                    />
                                 </button>
 
                             </div>
