@@ -8,6 +8,7 @@ import hot from "../../public/images/general/logo.png"
 import cold from "../../public/images/general/logo.png"
 import dessert from "../../public/images/general/logo.png"
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
 
@@ -32,6 +33,27 @@ function Home() {
             link: "/dessert"
         },
     ];
+
+    const [subtitle, setSubtitle] = useState("");
+
+    useEffect(() => {
+        const time = new Date();
+        const hour = time.getHours();
+
+        if (hour >= 5 && hour < 10) {
+            setSubtitle("صبح دل انگیزیه، نه؟");
+        }
+        else if (hour >= 10 && hour < 16) {
+            setSubtitle("ظهر آرومی داشته باشی");
+        }
+        else if (hour >= 16 && hour < 20) {
+            setSubtitle("هیچی بهتر از یک عصرونه عالی نیست");
+        }
+        else if (hour >= 20 || hour < 5) {
+            setSubtitle("یه شب دلنشین با یه فنجون قهوه");
+        }
+
+    }, []);
 
     if (window.innerWidth > 1000) {
         return (
@@ -82,7 +104,7 @@ function Home() {
 
                     {/* Close Button */}
                     <button
-                        onClick={() => { window.close()}}
+                        onClick={() => { window.close() }}
                         className="
                 inline-flex items-center justify-center gap-2
                 px-6 py-3
@@ -147,9 +169,9 @@ function Home() {
                 {/* cafe name and welcome text */}
                 <div className="w- mt-5 pr-10">
 
-                    <h1 className="text-3xl"> کافه نویر </h1>
+                    <h1 className="text-sm text-white/50"> به <span className="text-2xl mx-1 text-white"> کافه نویر</span> خوش اومدی !</h1>
 
-                    <p className="text-sm mt-5"> صبح دل انگیزیه، نه؟ </p>
+                    <p className="text-sm mt-3"> {subtitle} </p>
 
                 </div>
 

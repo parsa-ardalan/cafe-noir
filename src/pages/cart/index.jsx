@@ -10,6 +10,8 @@ import { ShoppingBag } from "lucide-react";
 
 export default function Cart() {
 
+    const dispatch = useDispatch()
+
     const cartItems = useSelector((state) => state.cart);
     const navigate = useNavigate();
 
@@ -46,7 +48,11 @@ export default function Cart() {
 
     ];
 
-    const dispatch = useDispatch()
+    // total price
+    const totalPrice = cartItems.reduce((total, item) => {
+        return total + item.price;
+    }, 0);
+    console.log(totalPrice)
 
     return (
         <main
@@ -236,76 +242,6 @@ export default function Cart() {
                 </section>
 
 
-                {/* Total */}
-                <section
-                    className="
-                        mt-5 rounded-2xl
-                        border border-white/10
-                        bg-[#151312]
-                        p-4 sm:p-5
-                    "
-                >
-
-                    <div className="flex items-center justify-between gap-3">
-
-                        <div className="flex items-center gap-2.5">
-
-                            <div
-                                className="
-                                    flex size-9 shrink-0
-                                    items-center justify-center
-                                    rounded-lg
-                                    bg-white/[0.04]
-                                "
-                            >
-                                <Tag
-                                    size={20}
-                                    strokeWidth={1.5}
-                                    className="text-[#e3ded9]"
-                                />
-                            </div>
-
-                            <span className="text-base font-medium sm:text-lg">
-                                قیمت کل
-                            </span>
-
-                        </div>
-
-
-                        <span
-                            className="
-                                whitespace-nowrap
-                                text-base font-semibold
-                                text-[#d99554]
-                                sm:text-lg
-                            "
-                        >
-                            315,000 تومان
-                        </span>
-
-                    </div>
-
-
-                    <button
-                        className="
-                            mt-4 flex h-11 w-full
-                            items-center justify-center
-                            rounded-xl
-                            bg-gradient-to-r
-                            from-[#a96631] to-[#7b461f]
-                            text-sm font-medium text-white
-                            transition
-                            hover:brightness-110
-                            active:scale-[0.99]
-                            sm:h-12 sm:text-base
-                        "
-                    >
-                        پرداخت سبد خرید
-                    </button>
-
-                </section>
-
-
                 {/* Recommended */}
                 <section className="mt-8">
 
@@ -406,6 +342,75 @@ export default function Cart() {
                         ))}
 
                     </div>
+
+                </section>
+
+                {/* Total */}
+                <section
+                    className="
+                        mt-5 rounded-2xl
+                        border border-white/10
+                        bg-[#151312]
+                        p-4 sm:p-5
+                    "
+                >
+
+                    <div className="flex items-center justify-between gap-3">
+
+                        <div className="flex items-center gap-2.5">
+
+                            <div
+                                className="
+                                    flex size-9 shrink-0
+                                    items-center justify-center
+                                    rounded-lg
+                                    bg-white/[0.04]
+                                "
+                            >
+                                <Tag
+                                    size={20}
+                                    strokeWidth={1.5}
+                                    className="text-[#e3ded9]"
+                                />
+                            </div>
+
+                            <span className="text-base font-medium sm:text-lg">
+                                قیمت کل
+                            </span>
+
+                        </div>
+
+
+                        <span
+                            className="
+                                whitespace-nowrap
+                                text-base font-semibold
+                                text-[#d99554]
+                                sm:text-lg
+                            "
+                        >
+                            {totalPrice.toLocaleString("fa-IR")} تومان
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        className="
+                            mt-4 flex h-11 w-full
+                            items-center justify-center
+                            rounded-xl
+                            bg-gradient-to-r
+                            from-[#a96631] to-[#7b461f]
+                            text-sm font-medium text-white
+                            transition
+                            hover:brightness-110
+                            active:scale-[0.99]
+                            sm:h-12 sm:text-base
+                        "
+                    >
+                        پرداخت سبد خرید
+                    </button>
 
                 </section>
 
