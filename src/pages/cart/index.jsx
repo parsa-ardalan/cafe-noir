@@ -7,6 +7,9 @@ import { addItem, removeItem } from "../../redux/cartSlice/cartSlice";
 import { useNavigate } from "react-router-dom";
 import { ShoppingBag } from "lucide-react";
 
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 
 export default function Cart() {
 
@@ -16,37 +19,43 @@ export default function Cart() {
     const navigate = useNavigate();
 
     // offered items
-    const offered = [
-        {
-            "name": "چای دارچین",
-            "description": "ترکیبی خوش‌عطر از گل‌های معطر و گیاهان آرامش‌بخش. مناسب برای لحظاتی آرام و دلنشین.",
-            "deliveryTime": "7-12 min",
-            "price": 90000,
-            "image": "../images/hot/tea.jpg"
-        },
-        {
-            name: "کوکی شکلات چیپ",
-            description: "کوکی تازه و خوش‌عطر با تکه‌های شکلات در هر لقمه. بیرون کمی ترد و داخل نرم و لطیف.",
-            deliveryTime: "5-10 min",
-            price: 95000,
-            image: "../images/desserts/chocolate-chip-cookie.jpg"
-        },
-        {
-            name: "کروسان شکلاتی",
-            description: "کروسان لایه‌لایه و تازه با مغز شکلاتی لطیف. انتخابی عالی برای کنار قهوه.",
-            deliveryTime: "7-12 min",
-            price: 125000,
-            image: "../images/desserts/chocolate-croissant.jpg"
-        },
-        {
-            "name": "شیک شکلات",
-            "description": "شیک غلیظ و خنک با طعم عمیق شکلات. گزینه‌ای محبوب برای دوستداران نوشیدنی‌های شیرین.",
-            "deliveryTime": "8-15 min",
-            "price": 175000,
-            "image": "../images/cold/chocolate-shake.jpg"
-        }
+    const [offered, setOffered] = useState([]);
 
-    ];
+    useEffect(() => {
+
+        const getOfferedItems = async () => {
+
+            try {
+
+                const response = await axios.get(
+                    "http://localhost:3000/cafe-noir/items"
+                );
+
+                const allItems = [
+                    ...response.data.cold,
+                    ...response.data.hot,
+                    ...response.data.dessert
+                ];
+
+                const cartItemNames = cartItems.map((item) => item.name);
+
+                const availableItems = allItems.filter(
+                    (item) => !cartItemNames.includes(item.name)
+                );
+
+                setOffered(availableItems.slice(0, 4));
+
+            } catch (error) {
+
+                console.error("Error fetching offered items:", error);
+
+            }
+
+        };
+
+        getOfferedItems();
+
+    }, [cartItems]);
 
     // total price
     const totalPrice = cartItems.reduce((total, item) => {
