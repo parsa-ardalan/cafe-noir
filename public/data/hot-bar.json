@@ -4,6 +4,7 @@
         "description": "اسپرسوی خالص و غلیظ با عطر قوی و طعم متعادل. انتخابی کلاسیک برای شروع یک روز پرانرژی.",
         "deliveryTime": "5-10 min",
         "price": 85000,
+        "discount": 10,
         "image": "../images/hot/espresso.jpg"
     },
     {
@@ -11,6 +12,7 @@
         "description": "ترکیبی از اسپرسوی تازه و آب داغ با طعمی ملایم‌تر و حجم بیشتر. مناسب برای طرفداران قهوه ساده.",
         "deliveryTime": "5-10 min",
         "price": 95000,
+        "discount": 10,
         "image": "../images/hot/americano.jpg"
     },
     {
@@ -18,6 +20,7 @@
         "description": "اسپرسوی تازه همراه با شیر بخار داده شده و فوم نرم و لطیف. طعمی متعادل و خامه‌ای.",
         "deliveryTime": "7-12 min",
         "price": 125000,
+        "discount": 10,
         "image": "../images/hot/cappuccino.jpg"
     },
     {
@@ -25,6 +28,7 @@
         "description": "اسپرسو با مقدار زیادی شیر بخار داده شده و لایه‌ای ظریف از فوم. نوشیدنی‌ای نرم و دلنشین.",
         "deliveryTime": "7-12 min",
         "price": 130000,
+        "discount": 10,
         "image": "../images/hot/latte.jpg"
     },
     {
@@ -32,6 +36,7 @@
         "description": "ترکیبی دلچسب از اسپرسو، شیر گرم و شکلات با طعمی شیرین و عمیق. مناسب دوستداران قهوه و شکلات.",
         "deliveryTime": "8-13 min",
         "price": 145000,
+        "discount": 10,
         "image": "../images/hot/mocha.jpg"
     },
     {
@@ -39,6 +44,7 @@
         "description": "شیر بخار داده شده، اسپرسو و سس کارامل با رایحه‌ای شیرین و جذاب. انتخابی محبوب برای یک نوشیدنی خاص.",
         "deliveryTime": "8-13 min",
         "price": 155000,
+        "discount": 10,
         "image": "../images/hot/macchiato.jpg"
     },
     {
@@ -46,6 +52,7 @@
         "description": "شکلات داغ و غلیظ با بافتی نرم و لطیف. نوشیدنی‌ای گرم و آرامش‌بخش برای روزهای خنک.",
         "deliveryTime": "7-12 min",
         "price": 135000,
+        "discount": 10,
         "image": "../images/hot/hot-chocolate.jpg"
     },
     {
@@ -53,6 +60,7 @@
         "description": "چای سیاه با شیر و ترکیبی از ادویه‌های معطر. گرم، خوش‌عطر و سرشار از حس‌وحال شرقی.",
         "deliveryTime": "7-12 min",
         "price": 115000,
+        "discount": 10,
         "image": "../images/hot/masala.jpg"
     },
     {
@@ -60,6 +68,7 @@
         "description": "چای سبز معطر و سبک با طعمی ظریف و تازه. انتخابی ساده برای یک نوشیدنی گرم و آرام.",
         "deliveryTime": "5-10 min",
         "price": 75000,
+        "discount": 10,
         "image": "../images/hot/green-tea.jpg"
     },
     {
@@ -67,6 +76,7 @@
         "description": "ترکیبی خوش‌عطر از گل‌های معطر و گیاهان آرامش‌بخش. مناسب برای لحظاتی آرام و دلنشین.",
         "deliveryTime": "7-12 min",
         "price": 90000,
+        "discount": 10,
         "image": "../images/hot/tea.jpg"
     }
 ]
